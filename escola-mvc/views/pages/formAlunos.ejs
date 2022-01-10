@@ -1,0 +1,55 @@
+<%- include('../partials/header'); %>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1 class="mt-5">Cadastrar Alunos</h1>
+        <form action="/alunos/cadastroAluno" method="POST">
+
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input class="form-control" type="text" id="nome" name="nome" placeholder="Nome Completo do Aluno" required>
+            <!-- <input onblur(validaNome(value)) class="form-control" type="text" id="nome" name="nome" placeholder="Nome Completo do Aluno" required> -->
+          </div>
+
+          <div class="form-group">
+            <label for="data">Data de Nascimento</label>
+            <input class="form-control" type="date" id="data" name="dataNasc" required>
+          </div>
+
+          <div class="form-group">
+            <label for="turma">Turma</label>
+            <select name="turma" id="turma" class="form-control" required> Turmas
+              <option value="" selected disabled hidden>Escolha</option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="nota">Nota</label>
+            <input class="form-control" type="number" step="0.01" id="nota" name="nota" placeholder="9.5" required>
+          </div>
+
+          <div class="form-group">
+            <label for="matricula">Matricula</label>
+            <input class="form-control" type="number" id="matricula" name="matricula" placeholder="152" required>
+          </div>
+
+          <div class="form-group">
+            <label for="tel">Telefone</label>
+            <input class="form-control" type="text" id="tel" name="tel" placeholder="11 22334455" required>
+          </div>
+
+          <button class="btn btn-primary" type="submit">Enviar</button>
+          <!-- <button class="btn btn-primary" onclick="valida()" type="button">Enviar</button> -->
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- <script src="meu script"></script> -->
+</body>
+
+<%- include('../partials/footer'); %>

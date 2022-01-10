@@ -1,0 +1,54 @@
+<%- include('../partials/header'); %>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1 class="mt-5">Cadastrar Alunos</h1>
+        <form action="/alunos/editarAluno" method="POST">
+
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input class="form-control" type="text" id="nome" name="nome" placeholder="Nome Completo do Aluno" required value="<%=dados_alunos.nome %>">
+          </div>
+
+          <div class="form-group">
+            <label for="data">Data de Nascimento</label>
+            <input class="form-control" type="date" id="data" name="dataNasc" required value="<%=dados_alunos.dataNasc %>">
+          </div>
+
+          <div class="form-group">
+            <label for="turma">Turma</label>
+            <select name="turma" id="turma" class="form-control" required> Turmas
+              <option value="<%=dados_alunos.turma %>"></option selected disabled>Escolha</option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="nota">Nota</label>
+            <input class="form-control" type="number" step="0.01" id="nota" name="nota" placeholder="9.5" required value="<%=dados_alunos.nota %>">
+          </div>
+
+          <div class="form-group">
+            <label for="matricula">Matricula</label>
+            <input class="form-control" type="number" id="matricula" name="matricula" placeholder="152" required value="<%=dados_alunos.matricula %>">
+          </div>
+
+          <div class="form-group">
+            <label for="tel">Telefone</label>
+            <input class="form-control" type="text" id="tel" name="tel" placeholder="11 22334455" required value="<%=dados_alunos.tel %>">
+          </div>
+
+          <input type="hidden" name="id" value="<%=dados_alunos._id %>">
+
+          <button class="btn btn-primary" type="submit">Salvar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+
+<%- include('../partials/footer'); %>
